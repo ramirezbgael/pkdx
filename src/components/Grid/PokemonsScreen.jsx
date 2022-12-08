@@ -4,11 +4,13 @@ import './pokemonsScreen.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import logo from '../../assets/logo.png'
+import Settings from './Settings/Settings'
 
 const PokemonsScreen = ({clickCard}) => {
 
   const [data, setData] = useState()
   const [isLoading, setIsLoading] = useState("true")
+  const [show, setShow] = useState(false)
 
 
   const handleToggle = () =>{
@@ -70,6 +72,7 @@ const PokemonsScreen = ({clickCard}) => {
     },900)
   }
 
+  
 
   if(isLoading === "true"){
     return (
@@ -79,6 +82,7 @@ const PokemonsScreen = ({clickCard}) => {
   )} else {
     return (
       <article className='pokemonsScreen'>
+        <Settings show={show} onClose={() => setShow(false)}/>
         <header className='pokemonsScreen-header'>
             {/*Arrow*/}
             <div className='header-arrow'>
@@ -86,8 +90,8 @@ const PokemonsScreen = ({clickCard}) => {
             </div>
             {/*Hamburger*/}
             <div className='header-menu'>
-              <button className='menu-btn-btn'>
-                <i className='menu-btn bx bx-menu'></i>
+              <button onClick={() => setShow(true)} className='menu-btn-btn'>
+                <i  className='menu-btn bx bx-cog'></i>
               </button>
             </div>
             {/*Navigation bar*/}

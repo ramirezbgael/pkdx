@@ -1,4 +1,75 @@
 .about{
+  margin-top: 5vh;
   display: flex;
+  align-items: center;
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  position: absolute;
   flex-direction: column;
+}
+
+h5{
+  width: 100vw;
+  padding-left: 8vw;
+  margin-bottom: 1vh;
+}
+
+.about-container{
+  padding-left: 5vw;
+  width: 95vw;
+  display: flex;
+}
+
+.column-one{
+  color: rgb(77, 77, 77);
+  width: 28vw;
+  height: 15vh;
+}
+
+.column-two{
+  font-weight: 500;
+  width: 45vw;
+  font-size:medium;
+  height: 15vh;
+  text-transform: capitalize;
+}
+
+.stats-container{
+  padding-left: 5vw;
+  width: 95vw;
+  display: flex;
+}
+
+.stats-column-one{
+  width: 28vw;
+  color: rgb(77, 77, 77);
+}
+
+.stats-column-two{
+  width: 55vw;
+}
+
+.hp{
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.attack{
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.defense{
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.speed{
+  align-items: center;
+  display: flex;
+  gap: 8px;
 }
