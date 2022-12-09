@@ -7,11 +7,16 @@ import { useState } from 'react'
 const WelcomeScreen = () => {
   const navigate = useNavigate()
   
-  const [name, setName] = useState("")
+  const [name, setName] = useState()
 
   const handleSubmit = (e) =>{
     e.preventDefault()
-    navigate('/pokemons')
+    if (name){
+      navigate('/pokemons')
+    } else {
+      navigate('/')
+      alert('Sorry, we need your name to continue')
+    }
   }
 
 

@@ -5,8 +5,9 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import logo from '../../assets/logo.png'
 import Settings from './Settings/Settings'
+import { useNavigate } from 'react-router-dom'
 
-const PokemonsScreen = ({clickCard}) => {
+const PokemonsScreen = () => {
 
   const [data, setData] = useState()
   const [isLoading, setIsLoading] = useState("true")
@@ -72,6 +73,8 @@ const PokemonsScreen = ({clickCard}) => {
     },900)
   }
 
+  const navigate = useNavigate()
+
   
 
   if(isLoading === "true"){
@@ -85,7 +88,7 @@ const PokemonsScreen = ({clickCard}) => {
         <Settings show={show} onClose={() => setShow(false)}/>
         <header className='pokemonsScreen-header'>
             {/*Arrow*/}
-            <div className='header-arrow'>
+            <div onClick={()=>navigate('/')} className='header-arrow'>
               <i className='arrow-btn bx bx-arrow-back'></i>
             </div>
             {/*Hamburger*/}
