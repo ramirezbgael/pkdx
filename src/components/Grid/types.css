@@ -87,10 +87,9 @@
 
 .header-menu{
   height: 10vh;
-  width: 50vw;
+  width: 100vw;
   justify-content: flex-end;
   display: flex;
-  padding-top: var(--pading-top);
   padding-right: var(--padding-left);
   font-size: x-large;
 }
@@ -105,14 +104,19 @@
   display: flex;
   align-items: flex-end;
   padding-left: var(--padding-left);
-  padding-bottom: 8.4157vh;
+  padding-bottom: 9.4157vh;
 }
 
 .header-title-container{
   height: 2.47933vh;
-  width: 30.35714vw;
+  width: 90.35714vw;
   font-size: 1.2em;
   font-weight: 600;
+}
+
+.header-title-container > p{
+  text-transform: capitalize;
+  position: absolute;
 }
 
 .header-logo {
@@ -152,3 +156,4 @@
   margin-left: 5.4vw;
 }
  /**/
+ 

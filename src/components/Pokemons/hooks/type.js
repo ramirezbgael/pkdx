@@ -2,7 +2,7 @@ import axios from "axios"
 import { useState } from "react"
 
 const getType = (URL) =>{
-  const [type, setType] = useState()
+  const [ptype, setType] = useState()
   const [id, setId] = useState()
   if(URL){
     axios.get(URL)
@@ -11,7 +11,7 @@ const getType = (URL) =>{
       setId(res.data.id)
     })
     .catch((err) => console.log('el error es aquí', err))
-    return {type, id}
+    return {ptype, id}
   }
 }
 

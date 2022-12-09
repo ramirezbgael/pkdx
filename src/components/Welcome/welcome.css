@@ -4,6 +4,16 @@
   display: flex;
   align-items: flex-end;
   flex-direction: column;
+  animation: welcome 1.2s ease-in-out;
+}
+
+@keyframes welcome {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100;
+  }
 }
 
 .welcome-aside {

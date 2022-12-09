@@ -5,6 +5,8 @@ import PokeInfoScreen from './components/Individual/PokeInfoScreen'
 import { Route, Routes } from 'react-router-dom'
 import ProtectedRoutes from './ProtectedRoutes'
 import { useState } from 'react'
+import TypeInfoScreen from './components/Individual/TypeInfoScreen'
+import TypesScreen from './components/Grid/TypesScreen'
 
 function App() {
 
@@ -15,6 +17,8 @@ function App() {
       <Route element={<ProtectedRoutes/>}>
         <Route path='/pokemons' element={<PokemonsScreen />} />
         <Route path='/pokemons/:id' element={<PokeInfoScreen/>} />
+        <Route path='/pokemons/types/:type' element={<TypesScreen/>}/>
+        <Route path='/pokemons/types/:type/:id' element={<TypeInfoScreen/>}/>
       </Route>
     </Routes>
   )

@@ -64,7 +64,23 @@
 }
 
 .ghost{
-  background-color: rgb(141, 93, 31);
+  background-color: rgb(194, 19, 107);
+}
+
+.dragon{
+  background-color: #0e4353;
+}
+
+.steel{
+  background-color: #413f3f;
+}
+
+.dark{
+  background-color: black;
+}
+
+.ice{
+  background-color: cornflowerblue;
 }
 
 .card-text{

@@ -1,8 +1,16 @@
 import React from 'react'
 import { useState } from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
 import './settings.css'
+import TypesScreen from '../TypesScreen'
 
 const Settings = props => {
+
+  const navigate = useNavigate()
+
+  const navigateType = (type) =>{
+    navigate(`/pokemons/types/${type}`)
+  }
 
   if (props.show) {
     return (
@@ -16,58 +24,55 @@ const Settings = props => {
               <article className='article-1'>
                 <div className='types-title'>Pokemon types</div>
                 <div className='types'>
-                  <div>
+                  <div onClick={()=>navigateType(1)}>
                     Normal
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(2)}>
                     Fighting
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(3)}>
                     Flying
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(4)}>
                     Poison
                   </div>
-                  <div>
-                    Poison
-                  </div>
-                  <div>
+                  <div onClick={()=>navigateType(5)}>
                     Ground
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(6)}>
                     Rock
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(7)}>
                     Bug
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(8)}>
                     Ghost
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(9)}>
                     Steel
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(10)}>
                     Fire
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(11)}>
                     Water
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(12)}>
                     Grass
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(13)}>
                     Electric
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(14)}>
                     Psychic
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(15)}>
                     Ice
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(16)}>
                     Dragon
                   </div>
-                  <div>
+                  <div onClick={()=>navigateType(17)}>
                     Fairy
                   </div>
                 </div>
