@@ -129,7 +129,7 @@
   /*MAIN*/
   .main{
     width: 95vw;
-    height: 80vh;
+    height: 70vh;
   }
   .card-zone{
     overflow:scroll;
@@ -137,7 +137,6 @@
     flex-direction: column;
     padding-right: 10vh;
     width: 100vw;
-    padding-top: 2.5vh;
     background-color: rgba(236, 236, 236, 0.76);
   }
   .pages{
@@ -152,6 +151,7 @@
     height: 3.3vh;
     width: 6vh;
     transform: rotate(-5deg);
+    margin-bottom: 25vh;
     background-color: rgba(89, 255, 117, 0.781);
   }
   #pages:hover{
