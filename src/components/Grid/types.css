@@ -130,6 +130,13 @@
   padding-left: var(--padding-left);
   column-gap: 3.21428vw;
   row-gap: 1.4876vh;
+  overflow-y: scroll;
+  height: 80vh;
+}
+.card-zone::-webkit-scrollbar{
+  display: block;
+  width: 2px;
+  height: 3px;
 }
 
 .pages{
@@ -137,6 +144,9 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 1vh;
+}
+.h1-types:hover{
+  cursor: pointer;
 }
 
 

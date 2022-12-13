@@ -2,6 +2,7 @@ import React from 'react'
 import PokemonCard from './Cards/typeCards'
 import './types.css'
 import axios from 'axios'
+import './pokemonsScreen.css'
 import { useState, useEffect } from 'react'
 import logo from '../../assets/logo.png'
 import Settings from './Settings/Settings'
@@ -31,7 +32,7 @@ const PokemonsScreen = () => {
       setData(res.data)
       setTimeout(()=>{
         handleToggle()
-      }, 2000)
+      }, 1000)
     })
   }
 
@@ -45,46 +46,23 @@ const PokemonsScreen = () => {
       </article>
   )} else {
     return (
-      <article className='pokemonsScreen'>
+      <article className='ps'>
         <Settings show={show} onClose={() => setShow(false)}/>
-        <header className='pokemonsScreen-header'>
-            {/*Arrow*/}
-            <div onClick={()=>navigate('/pokemons')} className='header-arrow'>
-              <i className='arrow-btn bx bx-arrow-back'></i>
-            </div>
-            {/*Hamburger*/}
-            <div className='header-menu'>
-              <button onClick={() => setShow(true)} className='menu-btn-btn'>
-                <i  className='menu-btn bx bx-cog'></i>
-              </button>
-            </div>
-            {/*Navigation bar*/}
-            <div className="header-title">
-              <div className="header-title-container">
-                <p>{data?.name} pokemons</p>
-              </div>
-            </div>
-          <nav>
-            {/*Navigation List*/}
-            <ul className='list'>
-              <li>
-                home
-              </li>
-              <li>
-                pokemons
-              </li>
-              <li>
-                about
-              </li>
-            </ul>
-          </nav>
+        <header className='ps-header'>
+          <div onClick={()=>navigate('/pokemons')} className='h1-types'>Pokedex <br></br>{'>'} {data.name} type</div>
+          <div className="set-btn">
+              <i onClick={()=>setShow(true)} className='bx bx-sort-a-z'></i>
+          </div>
         </header>
         <section>
-          <article className='card-zone'>
+          <article className='card-zone cz-types'>
             {data?.pokemon.map(pokemon => <PokemonCard pokemon={pokemon} type={type} key={pokemon.name}/>)}
           </article>
-
         </section>
+        <footer>
+            <i target='blank' href='https://github.com/ramirezbgael/pkdx' className='bx bxl-github'>
+              </i>
+        </footer>
       </article>
     )
   }

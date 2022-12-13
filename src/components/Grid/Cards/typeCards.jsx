@@ -27,21 +27,15 @@ const PokemonCard = ({pokemon, type}) => {
   console.log(ptype)
      
   return (
-    <Link to={id}>
+    <Link className='pkm-link' to={id}>
     <article onClick={() =>{onClick()}} className={`${ptype} pokemon-card`}>
-      <section className='card-text'>
-        <p>{pokemon.pokemon.name}</p>
-        <p className='pkm-number'>{'#'}{data?.id}</p>
-        <div className='type-container'>
-          <p className='type'>{ptype}</p>
-        </div>
-      </section>
-      <aside className='card-img'>
-        <img src={data?.sprites.other['official-artwork'].front_default} alt="" />
-      </aside>
-      <footer className='background'>
-        <img src={back} alt="" />
-      </footer>
+      <p className='pkm-name'>{pokemon.pokemon.name}</p>
+      <div className='pkm-type-container'>
+        <p className='pkm-type'>{ptype}</p>
+      </div>
+      <div className="pkm-image-container">
+        <img className='pkm-image' src={data?.sprites.other['official-artwork'].front_default} alt="" />
+      </div>
     </article>
     </Link>
   )

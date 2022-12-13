@@ -19,10 +19,10 @@ const Settings = props => {
           <div className='set-container'>
             <header className='set-container-header'>
               <h4>Search Filters</h4>
+              <div className='types-title'>Pokemon types</div>
             </header>
             <main className='set-container-body'>
               <article className='article-1'>
-                <div className='types-title'>Pokemon types</div>
                 <div className='types'>
                   <div onClick={()=>navigateType(1)}>
                     Normal
@@ -72,7 +72,7 @@ const Settings = props => {
                   <div onClick={()=>navigateType(16)}>
                     Dragon
                   </div>
-                  <div onClick={()=>navigateType(17)}>
+                  <div onClick={()=>navigateType(18)}>
                     Fairy
                   </div>
                 </div>
@@ -83,7 +83,7 @@ const Settings = props => {
                 className='footer-button'
                 onClick={props.onClose}
               >
-                Close
+                <p>Close</p>
               </button>
             </footer>
           </div>

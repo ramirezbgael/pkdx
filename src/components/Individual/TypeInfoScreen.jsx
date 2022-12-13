@@ -49,40 +49,14 @@ const PokeInfoScreen = () => {
 
   
   return (
-    <div className={`infoScreen ${ptype}`}>
-      <header className='infoScreen-header'>
-        <div className="header-container">
-          {/*Arrow*/}
-          <div className='header-arrow'>
-            <i onClick={backClick} className='arrow-btn bx bx-arrow-back'></i>
-          </div>
-          {/*Heart*/}
-          <div className='header-menu'>
-            <i onClick={heartClick} className={heart}></i>
-          </div>
-          {/*Navigation bar*/}
-          <div className="header-title">
-            <div className="header-title-container">
-              <p>{name}</p>
-            </div>
-          </div>
-          <div className='title-circle'>
-            <p>{ptype}</p>
-          </div>
-        </div>
-
-        <img className='logo' src={logosil} alt="" />
-      </header>
-
-        <div className="bulbasaur-container">
-          <img className='bulbasaur' src={info?.sprites.other['official-artwork'].front_default} alt="" />
-        </div>
-      <table className='info-card'>
-        <section className="info">
-          <About info={info}/>
-        </section>
-      </table>
-    </div>
+    <>
+      <div className='is-header'>
+        <i onClick={backClick} className='arrow-btn bx bx-arrow-back'></i>
+      </div>
+      <div className={`infoScreen ${ptype}`}>
+        <About info={info}/>
+      </div>
+    </>
   )
 }
 

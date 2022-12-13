@@ -21,7 +21,7 @@ const WelcomeScreen = () => {
 
 
   return (
-    <article className='welcome'>
+    <div className='welcome'>
       <aside className='welcome-aside'>
         <img src={logo} alt="" />
       </aside>
@@ -60,7 +60,7 @@ const WelcomeScreen = () => {
         <a href="https://github.com/ramirezbgael" target='blank'>github/ramirezbgael</a>
         <p>&copy; 2022</p>
       </footer>
-    </article>
+    </div>
   )
 }
 

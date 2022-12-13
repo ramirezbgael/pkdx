@@ -86,50 +86,28 @@ const PokemonsScreen = () => {
       </article>
   )} else {
     return (
-      <article className='pokemonsScreen'>
+      <article className='ps'>
         <Settings show={show} onClose={() => setShow(false)}/>
-        <header className='pokemonsScreen-header'>
-            {/*Arrow*/}
-            <div onClick={()=>navigate('/')} className='header-arrow'>
-              <i className='arrow-btn bx bx-arrow-back'></i>
-            </div>
-            {/*Hamburger*/}
-            <div className='header-menu'>
-              <button onClick={() => setShow(true)} className='menu-btn-btn'>
-                <i  className='menu-btn bx bx-cog'></i>
-              </button>
-            </div>
-            {/*Navigation bar*/}
-            <div className="header-title">
-              <div className="header-title-container">
-                <p>POKEDEX</p>
-              </div>
-            </div>
-          <nav>
-            {/*Navigation List*/}
-            <ul className='list'>
-              <li>
-                home
-              </li>
-              <li>
-                pokemons
-              </li>
-              <li>
-                about
-              </li>
-            </ul>
-          </nav>
+        <header className='ps-header'>
+          <h1>Pokedex</h1>
+          <div className="set-btn">
+              <i onClick={()=>setShow(true)} className='bx bx-sort-a-z'></i>
+          </div>
         </header>
-        <section>
-          <article className='card-zone'>
+        <div className='main'>
+          <div className='card-zone'>
             {data?.results.map(pokemon => <PokemonCard pokemon={pokemon} key={pokemon.name}/>)}
-          </article>
+          </div>
 
-          <article className='pages'>
-            <button onClick={() => prevPage()}><i className='bx left bx-left-arrow-alt'></i></button>
-            <button onClick={() => nextPage()}><i className='bx right bx-right-arrow-alt'></i></button>
-          </article>
-        </section>
+          <div className='pages'>
+            <button onClick={() => prevPage()}><i id='pages' className='bx left bx-left-arrow-alt'></i></button>
+            <button onClick={() => nextPage()}><i id='pages' className='bx right bx-right-arrow-alt'></i></button>
+          </div>
+        </div>
+        <footer>
+            <i target='blank' href='https://github.com/ramirezbgael/pkdx' className='bx bxl-github'>
+              </i>
+        </footer>
       </article>
     )
   }
