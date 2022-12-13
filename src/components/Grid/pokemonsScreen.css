@@ -29,6 +29,7 @@
 /*===*/
 @media screen and (max-width: 2560px){
   .ps{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
   }
@@ -58,11 +59,11 @@
   }
   .card-zone{
     overflow: hidden;
-    height: 60vh;
+    height: 50vh;
     display: flex;
     padding-right: 10vh;
     width: 90vw;
-    padding-bottom: 3vh;
+    padding-bottom: 10vh;
     margin-top: 4vh;
   }
   .pages{
@@ -72,6 +73,7 @@
     padding-left: 1.8vh;
     display: flex;
     align-items: center;
+    padding-bottom: 10vh;
   }
   .hello{
     margin-left: 7vw;
